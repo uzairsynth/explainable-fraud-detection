@@ -1,0 +1,81 @@
+{
+  "dataset": {
+    "train": {
+      "transactions": 170884,
+      "frauds": 360
+    },
+    "val": {
+      "transactions": 56961,
+      "frauds": 57
+    },
+    "test": {
+      "transactions": 56962,
+      "frauds": 75
+    }
+  },
+  "models": {
+    "logistic_regression": {
+      "pr_auc": 0.7483956712577766,
+      "roc_auc": 0.9833011642964707,
+      "threshold": 0.9999926458136624,
+      "precision": 0.9615384615384616,
+      "recall": 0.6666666666666666,
+      "f1": 0.7874015748031495,
+      "tp": 50,
+      "fp": 2,
+      "fn": 25,
+      "tn": 56885,
+      "fraud_amount_caught_pct": 0.6034588045944891,
+      "alerts_per_10k": 9.128892946174643,
+      "train_seconds": 2.12,
+      "latency_ms": 3.322
+    },
+    "xgboost": {
+      "pr_auc": 0.7873460177818293,
+      "roc_auc": 0.9809716338237794,
+      "threshold": 0.8666912913322449,
+      "precision": 0.8888888888888888,
+      "recall": 0.7466666666666667,
+      "f1": 0.8115942028985508,
+      "tp": 56,
+      "fp": 7,
+      "fn": 19,
+      "tn": 56880,
+      "fraud_amount_caught_pct": 0.6585662793074627,
+      "alerts_per_10k": 11.06000491555774,
+      "train_seconds": 32.77,
+      "latency_ms": 14.705,
+      "trees_used": 306
+    }
+  },
+  "xgboost_amount_slices": [
+    {
+      "band": "0-10",
+      "transactions": 21786,
+      "frauds": 45,
+      "recall": 0.7777777777777778,
+      "precision": 0.8536585365853658
+    },
+    {
+      "band": "10-100",
+      "transactions": 25081,
+      "frauds": 15,
+      "recall": 0.7333333333333333,
+      "precision": 1.0
+    },
+    {
+      "band": "100-500",
+      "transactions": 8480,
+      "frauds": 11,
+      "recall": 0.7272727272727273,
+      "precision": 1.0
+    },
+    {
+      "band": "500+",
+      "transactions": 1615,
+      "frauds": 4,
+      "recall": 0.5,
+      "precision": 0.6666666666666666
+    }
+  ]
+}

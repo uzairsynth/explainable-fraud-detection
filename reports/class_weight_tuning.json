@@ -1,0 +1,14 @@
+{
+  "none (1)": {
+    "scale_pos_weight": 1.0,
+    "val_pr_auc": 0.7737
+  },
+  "sqrt(ratio)": {
+    "scale_pos_weight": 21.8,
+    "val_pr_auc": 0.7857
+  },
+  "ratio": {
+    "scale_pos_weight": 473.7,
+    "val_pr_auc": 0.7745
+  }
+}
